@@ -25,6 +25,7 @@ func SSE(c echo.Context) error {
 	}
 
 	command := mcpserver.GetCommand(key)
+	fmt.Println("[debug] command: ", command)
 	if command == "" {
 		return c.String(http.StatusBadRequest, "Server command not found")
 	}

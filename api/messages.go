@@ -31,6 +31,7 @@ func Messages(c echo.Context) error {
 	if err != nil {
 		return ctx.JSONRPCError(jsonrpc.ErrorParseError, nil)
 	}
+	fmt.Println("[debug] Messages request: ", request)
 
 	client := session.Client()
 
